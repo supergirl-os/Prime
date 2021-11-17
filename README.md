@@ -1,37 +1,63 @@
-### About P0 project
+# SCU Database Systems
+# SQLite Project Source Code
 
-姓名：王雅璇
+### Build
+```
+mkdir build
+cd build
+cmake ..
+make
+```
+Debug mode:
 
 ```
-###########目录结构描述
-
-├── Readme.md                   // help
-├── code                        // 代码文件夹
-│   ├── p0_starter.h            // 老师提供的代码文件
-│   ├── p0_starter.cpp          // 头文件中相应函数的实现
-│   └── p0_test.cpp              // 测试文件
+cmake -DCMAKE_BUILD_TYPE=Debug ..
+make
 ```
 
+### Testing
 ```
-##########测试文件函数描述
-
-//测试RowMatrix各个成员函数的功能
-void test_rowmat();
-
-//测试矩阵初始化
-void test_init();
-
-//矩阵加法
-void test_add();
-
-//矩阵乘法
-void test_mul();
-
-//矩阵乘法后加法
-void test_gemm();
+cd build
+make check
 ```
 
-#########cmake之后运行结果test_result.png
+### Run virtual table extension in SQLite
+Start SQLite with:
+```
+cd build
+./bin/sqlite3
+```
 
-![](https://i.loli.net/2021/09/02/oJqy8VQxtuTminw.png)
+In SQLite, load virtual table extension with:
 
+```
+.load ./lib/libvtable.dylib
+```
+or load `libvtable.so` (Linux), `libvtable.dll` (Windows)
+
+Create virtual table:  
+1.The first input parameter defines the virtual table schema. Please follow the format of (column_name [space] column_type) seperated by comma. We only support basic data types including INTEGER, BIGINT, SMALLINT, BOOLEAN, DECIMAL and VARCHAR.  
+2.The second parameter define the index schema. Please follow the format of (index_name [space] indexed_column_names) seperated by comma.
+```
+sqlite> CREATE VIRTUAL TABLE foo USING vtable('a int, b varchar(13)','foo_pk a')
+```
+
+After creating virtual table:  
+Type in any sql statements as you want.
+```
+sqlite> INSERT INTO foo values(1,'hello');
+sqlite> SELECT * FROM foo ORDER BY a;
+a           b         
+----------  ----------
+1           hello   
+```
+See [Run-Time Loadable Extensions](https://sqlite.org/loadext.html) and [CREATE VIRTUAL TABLE](https://sqlite.org/lang_createvtab.html) for further information.
+
+### Virtual table API
+https://sqlite.org/vtab.html
+
+### TODO
+* update: when size exceed that page, table heap returns false and delete/insert tuple (rid will change and need to delete/insert from index)
+* delete empty page from table heap when delete tuple
+* implement delete table, with empty page bitmap in disk manager (how to persistent?)
+* index: unique/dup key, variable key
