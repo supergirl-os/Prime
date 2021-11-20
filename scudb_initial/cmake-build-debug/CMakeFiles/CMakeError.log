@@ -1,0 +1,33 @@
+Determining if the include file pthread.h exists failed with the following output:
+Change Dir: D:/本科课内学习资料集锦/大三上学习资料包/数据库系统原理/scudb_initial/scudb_initial/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/C++_learn/vscode_env/mingw64/bin/mingw32-make.exe -f Makefile cmTC_70d18/fast && D:/C++_learn/vscode_env/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_70d18.dir\build.make CMakeFiles/cmTC_70d18.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/本科课内学习资料集锦/大三上学习资料包/数据库系统原理/scudb_initial/scudb_initial/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_70d18.dir/CheckIncludeFile.c.obj
+D:\C++_learn\vscode_env\mingw64\bin\gcc.exe    -o CMakeFiles\cmTC_70d18.dir\CheckIncludeFile.c.obj -c D:\鏈璇惧唴瀛︿範璧勬枡闆嗛敠\澶т笁涓婂涔犺祫鏂欏寘\鏁版嵁搴撶郴缁熷師鐞哱scudb_initial\scudb_initial\cmake-build-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+gcc.exe: error: D:\鏈璇惧唴瀛︿範璧勬枡闆嗛敠\澶т笁涓婂涔犺祫鏂欏寘\鏁版嵁搴撶郴缁熷師鐞哱scudb_initial\scudb_initial\cmake-build-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c: No such file or directory
+gcc.exe: fatal error: no input files
+compilation terminated.
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_70d18.dir\build.make:77: CMakeFiles/cmTC_70d18.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'D:/本科课内学习资料集锦/大三上学习资料包/数据库系统原理/scudb_initial/scudb_initial/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_70d18/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX1y failed with the following output:
+Change Dir: D:/本科课内学习资料集锦/大三上学习资料包/数据库系统原理/scudb_initial/scudb_initial/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/C++_learn/vscode_env/mingw64/bin/mingw32-make.exe -f Makefile cmTC_60454/fast && D:/C++_learn/vscode_env/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_60454.dir\build.make CMakeFiles/cmTC_60454.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/本科课内学习资料集锦/大三上学习资料包/数据库系统原理/scudb_initial/scudb_initial/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_60454.dir/src.cxx.obj
+D:\C++_learn\vscode_env\mingw64\bin\g++.exe -DCOMPILER_SUPPORTS_CXX1y  -std=c++1y -o CMakeFiles\cmTC_60454.dir\src.cxx.obj -c D:\鏈璇惧唴瀛︿範璧勬枡闆嗛敠\澶т笁涓婂涔犺祫鏂欏寘\鏁版嵁搴撶郴缁熷師鐞哱scudb_initial\scudb_initial\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+g++.exe: error: D:\鏈璇惧唴瀛︿範璧勬枡闆嗛敠\澶т笁涓婂涔犺祫鏂欏寘\鏁版嵁搴撶郴缁熷師鐞哱scudb_initial\scudb_initial\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx: No such file or directory
+g++.exe: fatal error: no input files
+compilation terminated.
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_60454.dir\build.make:77: CMakeFiles/cmTC_60454.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'D:/本科课内学习资料集锦/大三上学习资料包/数据库系统原理/scudb_initial/scudb_initial/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_60454/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }

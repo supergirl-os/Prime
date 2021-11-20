@@ -1,0 +1,4 @@
+ToolSet: w64 6.0 (local)@D:\C++_learn\vscode_env\mingw64
+Options: 
+
+Options:
